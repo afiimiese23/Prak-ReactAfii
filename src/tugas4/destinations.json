@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "Candi Borobudur",
+    "category": "Sejarah",
+    "region": "Jawa",
+    "imageUrl": "https://picsum.photos/id/1040/400/300",
+    "description": "Candi Buddha terbesar di dunia yang dibangun pada abad ke-9.",
+    "location": { "province": "Jawa Tengah", "city": "Magelang" },
+    "pricing": { "weekday": 50000, "weekend": 75000 },
+    "facilities": ["Parkir", "Toilet", "Pemandu", "Toko Souvenir"]
+  },
+  {
+    "id": 2,
+    "name": "Pantai Kuta",
+    "category": "Alam",
+    "region": "Bali-Nusa",
+    "imageUrl": "https://picsum.photos/id/103/400/300",
+    "description": "Pantai ikonik di Bali yang terkenal dengan pemandangan matahari terbenamnya.",
+    "location": { "province": "Bali", "city": "Badung" },
+    "pricing": { "weekday": 0, "weekend": 0 },
+    "facilities": ["Parkir", "Toilet", "Penyewaan Papan Selancar", "Kafe"]
+  },
+  {
+    "id": 3,
+    "name": "Danau Toba",
+    "category": "Alam",
+    "region": "Sumatera",
+    "imageUrl": "https://picsum.photos/id/1015/400/300",
+    "description": "Danau vulkanik raksasa dengan Pulau Samosir di tengahnya.",
+    "location": { "province": "Sumatera Utara", "city": "Simalungun" },
+    "pricing": { "weekday": 10000, "weekend": 15000 },
+    "facilities": ["Parkir", "Toilet", "Penginapan", "Sewa Kapal"]
+  },
+  {
+    "id": 4,
+    "name": "Taman Mini Indonesia Indah",
+    "category": "Edukasi",
+    "region": "Jawa",
+    "imageUrl": "https://picsum.photos/id/1044/400/300",
+    "description": "Taman hiburan bertema budaya Indonesia yang merangkum seluruh provinsi.",
+    "location": { "province": "DKI Jakarta", "city": "Jakarta Timur" },
+    "pricing": { "weekday": 25000, "weekend": 35000 },
+    "facilities": ["Parkir", "Toilet", "Museum", "Kereta Gantung", "Kantin"]
+  },
+  {
+    "id": 5,
+    "name": "Raja Ampat",
+    "category": "Alam",
+    "region": "Papua",
+    "imageUrl": "https://picsum.photos/id/1016/400/300",
+    "description": "Gugusan kepulauan dengan pemandangan bawah laut terbaik di dunia.",
+    "location": { "province": "Papua Barat Daya", "city": "Raja Ampat" },
+    "pricing": { "weekday": 500000, "weekend": 500000 },
+    "facilities": ["Resort", "Penyewaan Alat Selam", "Pemandu Wisata"]
+  },
+  {
+    "id": 6,
+    "name": "Gunung Bromo",
+    "category": "Alam",
+    "region": "Jawa",
+    "imageUrl": "https://picsum.photos/id/1036/400/300",
+    "description": "Gunung berapi aktif yang terkenal dengan pemandangan *sunrise* epik.",
+    "location": { "province": "Jawa Timur", "city": "Probolinggo" },
+    "pricing": { "weekday": 29000, "weekend": 34000 },
+    "facilities": ["Parkir", "Sewa Jeep", "Kuda", "Toilet"]
+  },
+  {
+    "id": 7,
+    "name": "Taman Nasional Komodo",
+    "category": "Alam",
+    "region": "Bali-Nusa",
+    "imageUrl": "https://picsum.photos/id/1024/400/300",
+    "description": "Habitat asli kadal raksasa Komodo yang dilindungi.",
+    "location": { "province": "Nusa Tenggara Timur", "city": "Manggarai Barat" },
+    "pricing": { "weekday": 150000, "weekend": 250000 },
+    "facilities": ["Ranger", "Pusat Informasi", "Toilet", "Trekking Route"]
+  },
+  {
+    "id": 8,
+    "name": "Trans Studio Bandung",
+    "category": "Hiburan",
+    "region": "Jawa",
+    "imageUrl": "https://picsum.photos/id/1073/400/300",
+    "description": "Taman hiburan *indoor* terbesar di Indonesia dengan berbagai wahana seru.",
+    "location": { "province": "Jawa Barat", "city": "Bandung" },
+    "pricing": { "weekday": 200000, "weekend": 300000 },
+    "facilities": ["Parkir luas", "Toilet", "Food Court", "Mushola", "Loker"]
+  },
+  {
+    "id": 9,
+    "name": "Candi Prambanan",
+    "category": "Sejarah",
+    "region": "Jawa",
+    "imageUrl": "https://picsum.photos/id/1064/400/300",
+    "description": "Kompleks candi Hindu terbesar di Indonesia yang didedikasikan untuk Trimurti.",
+    "location": { "province": "DI Yogyakarta", "city": "Sleman" },
+    "pricing": { "weekday": 50000, "weekend": 75000 },
+    "facilities": ["Parkir", "Toilet", "Pemandu", "Taman", "Toko Souvenir"]
+  },
+  {
+    "id": 10,
+    "name": "Kawah Putih Ciwidey",
+    "category": "Alam",
+    "region": "Jawa",
+    "imageUrl": "https://picsum.photos/id/1050/400/300",
+    "description": "Danau kawah vulkanik dengan air berwarna putih kehijauan yang eksotis.",
+    "location": { "province": "Jawa Barat", "city": "Bandung" },
+    "pricing": { "weekday": 28000, "weekend": 28000 },
+    "facilities": ["Parkir", "Ontang-anting (Shuttle)", "Toilet", "Spot Foto"]
+  },
+  {
+    "id": 11,
+    "name": "Benteng Rotterdam",
+    "category": "Sejarah",
+    "region": "Sulawesi",
+    "imageUrl": "https://picsum.photos/id/1069/400/300",
+    "description": "Benteng peninggalan Kesultanan Gowa yang kemudian dibangun ulang oleh Belanda.",
+    "location": { "province": "Sulawesi Selatan", "city": "Makassar" },
+    "pricing": { "weekday": 20000, "weekend": 20000 },
+    "facilities": ["Museum", "Taman", "Toilet", "Pemandu Sejarah"]
+  },
+  {
+    "id": 12,
+    "name": "Dufan (Dunia Fantasi)",
+    "category": "Hiburan",
+    "region": "Jawa",
+    "imageUrl": "https://picsum.photos/id/1076/400/300",
+    "description": "Pusat hiburan *outdoor* terbesar di Jakarta dengan puluhan wahana memacu adrenalin.",
+    "location": { "province": "DKI Jakarta", "city": "Jakarta Utara" },
+    "pricing": { "weekday": 225000, "weekend": 275000 },
+    "facilities": ["Parkir", "Toilet", "Food Court", "Mushola", "Klinik"]
+  },
+  {
+    "id": 13,
+    "name": "Desa Penglipuran",
+    "category": "Budaya",
+    "region": "Bali-Nusa",
+    "imageUrl": "https://picsum.photos/id/1080/400/300",
+    "description": "Desa tradisional Bali yang dinobatkan sebagai salah satu desa terbersih di dunia.",
+    "location": { "province": "Bali", "city": "Bangli" },
+    "pricing": { "weekday": 25000, "weekend": 25000 },
+    "facilities": ["Area Parkir", "Toilet", "Pusat Oleh-oleh", "Homestay"]
+  },
+  {
+    "id": 14,
+    "name": "Kepulauan Derawan",
+    "category": "Alam",
+    "region": "Kalimantan",
+    "imageUrl": "https://picsum.photos/id/1084/400/300",
+    "description": "Surga tersembunyi dengan biota laut menakjubkan seperti ubur-ubur tanpa sengat.",
+    "location": { "province": "Kalimantan Timur", "city": "Berau" },
+    "pricing": { "weekday": 0, "weekend": 0 },
+    "facilities": ["Penginapan Atas Air", "Sewa Kapal", "Penyewaan Alat Selam"]
+  },
+  {
+    "id": 15,
+    "name": "Museum Angkut",
+    "category": "Edukasi",
+    "region": "Jawa",
+    "imageUrl": "https://picsum.photos/id/111/400/300",
+    "description": "Museum transportasi modern pertama di Indonesia yang memadukan edukasi dan hiburan.",
+    "location": { "province": "Jawa Timur", "city": "Batu" },
+    "pricing": { "weekday": 100000, "weekend": 120000 },
+    "facilities": ["Parkir", "Toilet", "Food Court", "Pasar Apung", "Mushola"]
+  },
+  {
+    "id": 16,
+    "name": "Lembah Harau",
+    "category": "Alam",
+    "region": "Sumatera",
+    "imageUrl": "https://picsum.photos/id/116/400/300",
+    "description": "Lembah subur yang diapit oleh tebing granit curam dengan pemandangan air terjun.",
+    "location": { "province": "Sumatera Barat", "city": "Lima Puluh Kota" },
+    "pricing": { "weekday": 15000, "weekend": 15000 },
+    "facilities": ["Parkir", "Toilet", "Homestay", "Warung Makan"]
+  },
+  {
+    "id": 17,
+    "name": "Tana Toraja",
+    "category": "Budaya",
+    "region": "Sulawesi",
+    "imageUrl": "https://picsum.photos/id/119/400/300",
+    "description": "Daerah pegunungan dengan budaya pemakaman tebing yang unik dan mistis.",
+    "location": { "province": "Sulawesi Selatan", "city": "Toraja Utara" },
+    "pricing": { "weekday": 10000, "weekend": 10000 },
+    "facilities": ["Pemandu Wisata", "Toko Souvenir", "Toilet", "Area Parkir"]
+  },
+  {
+    "id": 18,
+    "name": "Gili Trawangan",
+    "category": "Alam",
+    "region": "Bali-Nusa",
+    "imageUrl": "https://picsum.photos/id/124/400/300",
+    "description": "Pulau bebas kendaraan bermotor dengan pasir putih dan kehidupan malam yang semarak.",
+    "location": { "province": "Nusa Tenggara Barat", "city": "Lombok Utara" },
+    "pricing": { "weekday": 0, "weekend": 0 },
+    "facilities": ["Sewa Sepeda", "Kafe", "Resort", "Penyewaan Snorkel"]
+  },
+  {
+    "id": 19,
+    "name": "Kebun Raya Bogor",
+    "category": "Edukasi",
+    "region": "Jawa",
+    "imageUrl": "https://picsum.photos/id/132/400/300",
+    "description": "Kebun botani luas yang menjadi pusat konservasi tanaman di tengah kota.",
+    "location": { "province": "Jawa Barat", "city": "Bogor" },
+    "pricing": { "weekday": 15500, "weekend": 25500 },
+    "facilities": ["Parkir", "Sewa Sepeda Listrik", "Museum Zoologi", "Taman"]
+  },
+  {
+    "id": 20,
+    "name": "Jatim Park 2 (Batu Secret Zoo)",
+    "category": "Hiburan",
+    "region": "Jawa",
+    "imageUrl": "https://picsum.photos/id/137/400/300",
+    "description": "Kebun binatang modern dengan konsep interaktif dan museum satwa.",
+    "location": { "province": "Jawa Timur", "city": "Batu" },
+    "pricing": { "weekday": 140000, "weekend": 170000 },
+    "facilities": ["Parkir", "Food Court", "Toilet", "E-Bike", "Mushola"]
+  }
+]
