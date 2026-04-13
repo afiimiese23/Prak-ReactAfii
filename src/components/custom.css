@@ -1,0 +1,105 @@
+/* Import Font dari Google Web Fonts biar estetik */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Aturan dasar untuk seluruh halaman */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Wadah Utama Portofolio */
+.portfolio-container {
+  max-width: 800px;
+  margin: 40px auto; /* Memastikan posisinya pas di tengah */
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Foto Profil */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px auto;
+  border: 5px solid #4A90E2;
+  display: block;
+  box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+/* Teks Header */
+header h1 {
+  text-align: center;
+  margin-bottom: 5px;
+  color: #00356b;
+}
+
+header h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #025257;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+/* Desain Kotak (Card) untuk Tiap Bagian */
+.card {
+  background: #ffffff;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  /* Efek transisi untuk animasi hover */
+  transition: all 0.3s ease; 
+}
+
+/* Animasi saat Card disentuh Mouse */
+.card:hover {
+  transform: translateY(-5px); /* Ngambang ke atas sedikit */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-color: #4A90E2;
+}
+
+.card h3 {
+  color: #4A90E2;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+/* Desain Badge untuk Skills */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-badge {
+  background-color: #e1f0ff;
+  color: #4A90E2;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.skill-badge:hover {
+  background-color: #4A90E2;
+  color: white;
+}
+
+/* List Project */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
