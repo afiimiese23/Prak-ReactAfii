@@ -1,6 +1,6 @@
 import { useState } from "react"; // 1. Import useState
-import PageHeader from "../components/PageHeader";
-import customerData from "../data/Customers.json";
+import PageHeader from "../../components/PageHeader";
+import customerData from "../../data/Customers.json";
 
 export default function Customers() {
   // 2. Buat state untuk kontrol modal

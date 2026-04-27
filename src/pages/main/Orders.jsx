@@ -1,6 +1,6 @@
 import { useState } from "react";
-import PageHeader from "../components/PageHeader";
-import orderData from "../data/Orders.json";
+import PageHeader from "../../components/PageHeader";
+import orderData from "../../data/Orders.json";
 
 export default function Orders() {
   const [isModalOpen, setIsModalOpen] = useState(false);
