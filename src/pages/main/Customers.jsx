@@ -53,24 +53,22 @@ export default function Customers() {
           <tbody>
             {customerData.map((cust) => (
               <tr key={cust.id} className="border-t border-gray-50">
-                <td className="p-4 font-bold text-gray-700">{cust.id}</td>
-                
-                {/* Bagian Name yang sekarang bisa diklik */}
-                <td className="p-4">
-                  <Link
-                    to={`/customers/${cust.id}`} // Mengarahkan ke rute customer detail (misal: /customers/1)
-                    className="text-hijau hover:underline font-medium"
-                  >
-                    {cust.name}
-                  </Link>
-                </td>
-                
-                <td className="p-4 text-hijau font-bold">{cust.loyalty}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
-  );
+                <td className="p-4 font-bold text-gray-700">{cust.id}</td>
+
+                {/* Bagian Name yang sekarang bisa diklik */}
+                <td className="p-4">
+                  <Link
+                    to={`/customers/${cust.id}`} // Mengarahkan ke rute customer detail (misal: /customers/1)
+                    className="text-hijau hover:underline font-medium">
+                    {cust.name}
+                  </Link>
+                </td>
+                <td className="p-4 text-hijau font-bold">{cust.loyalty}</td>
+              </tr>
+            ))}
+         </tbody>
+        </table>
+      </div>
+    </div>
+  );
 }
