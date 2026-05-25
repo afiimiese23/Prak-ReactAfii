@@ -4,24 +4,22 @@ import PageHeader from "../../components/PageHeader";
 import customerData from "../../data/Customers.json";
 
 export default function Customers() {
-  // 2. Buat state untuk kontrol modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
+// 2. Buat state untuk kontrol modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  return (
+  return (
     <div className="p-4">
-      <PageHeader title="Customers" breadcrumb="Customer List">
-        {/* 3. Pasang fungsi onClick untuk buka modal */}
-        <button 
-          onClick={() => setIsModalOpen(true)}
-          className="bg-hijau text-white px-4 py-2 rounded-lg font-bold hover:bg-green-600 transition-all"
-        >
-          + Add New Customer
-        </button>
-      </PageHeader>
+       <PageHeader title="Customers" breadcrumb="Customer List">
+        {/* 3. Pasang fungsi onClick untuk buka modal */}
+        <button 
+          onClick={() => setIsModalOpen(true)}
+          className="bg-hijau text-white px-4 py-2 rounded-lg font-bold hover:bg-green-600 transition-all">
+            + Add New Customer </button>
+       </PageHeader>
 
-      {/* 4. Logika Pop-up Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+      {/* 4. Logika Pop-up Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
           <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md">
             <h2 className="text-2xl font-bold mb-6 text-gray-800">Add New Customer</h2>
             <form className="space-y-4">

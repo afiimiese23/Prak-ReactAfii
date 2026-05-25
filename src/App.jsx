@@ -16,6 +16,7 @@ const MainLayout = React.lazy(() => import("./layouts/MainLayout"))
 const Loading = React.lazy(() => import("./components/Loading"))
 const Components = React.lazy(() => import("./pages//main/Components"))
 const Products = React.lazy(() => import("./pages/main/Products"))
+const FiturXyz = React.lazy(() => import("./pages/main/FiturXyz"))
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
                 <Route path="/customers/:id" element={<CustomerDetail />} />
                 <Route path="/components" element={<Components />} />
                 <Route path="/products" element={<Products />} />
+                <Route path="/fitur" element={<FiturXyz />} />
             </Route>
 
             <Route element={<AuthLayout/>}>
