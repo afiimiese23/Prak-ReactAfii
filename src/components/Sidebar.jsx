@@ -68,7 +68,15 @@ export default function Sidebar() {
                             Fitur XYZ
                         </NavLink>
                     </li>  
-                                   
+
+                    {/* Notes */}
+                    <li>
+                        <NavLink id="menu-4" to="/notes" className={menuClass}>
+                            <MdListAlt className="mr-4 text-xl" />
+                            Notes
+                        </NavLink>
+                    </li>  
+
                     <li>
                         <NavLink to="/error-400" className={menuClass}>
                             <MdError className="mr-4 text-xl text-orange-500" />
