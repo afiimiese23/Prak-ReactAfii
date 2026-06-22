@@ -1,74 +1,64 @@
-import { useState } from "react"; // 1. Import useState
-import { Link } from "react-router-dom"; // Tambahkan import Link untuk navigasi
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import PageHeader from "../../components/PageHeader";
-import customerData from "../../data/Customers.json";
+import { profilesAPI } from "@/services/supabaseAPI";
 
 export default function Customers() {
-// 2. Buat state untuk kontrol modal
-  const [isModalOpen, setIsModalOpen] = useState(false);
+    const [customers, setCustomers] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
 
-  return (
-    <div className="p-4">
-       <PageHeader title="Customers" breadcrumb="Customer List">
-        {/* 3. Pasang fungsi onClick untuk buka modal */}
-        <button 
-          onClick={() => setIsModalOpen(true)}
-          className="bg-hijau text-white px-4 py-2 rounded-lg font-bold hover:bg-green-600 transition-all">
-            + Add New Customer </button>
-       </PageHeader>
+    useEffect(() => { loadCustomers(); }, []);
 
-      {/* 4. Logika Pop-up Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
-        <div className="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md">
-           <h2 className="text-2xl font-bold mb-6 text-gray-800">Add New Customer</h2>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-semibold mb-1">Full Name</label>
-                <input type="text" className="w-full border rounded-xl p-3 focus:ring-2 focus:ring-green-200 outline-none" placeholder="Enter name" />
-              </div>
-              <div>
-                <label className="block text-sm font-semibold mb-1">Email Address</label>
-                <input type="email" className="w-full border rounded-xl p-3 focus:ring-2 focus:ring-green-200 outline-none" placeholder="email@example.com" />
-              </div>
-              <div className="flex justify-end space-x-3 mt-8">
-                <button type="button" onClick={() => setIsModalOpen(false)} className="px-4 py-2 text-gray-500 font-medium">Cancel</button>
-                <button type="submit" className="bg-hijau text-white px-6 py-2 rounded-xl font-bold">Save Data</button>
-              </div>
-            </form>
-          </div>
+    const loadCustomers = async () => {
+        try {
+            setLoading(true);
+            const data = await profilesAPI.fetchAll();
+            setCustomers(data);
+        } catch (err) { setError("Gagal memuat data member."); }
+        finally { setLoading(false); }
+    };
+
+    const tierBadge = (tier) => {
+        const styles = { Bronze: "bg-orange-100 text-orange-500", Silver: "bg-gray-200 text-gray-600", Gold: "bg-yellow-100 text-yellow-600", Platinum: "bg-purple-100 text-purple-600" };
+        return <span className={`px-3 py-1 rounded-full text-xs font-semibold ${styles[tier] || styles.Bronze}`}>{tier}</span>;
+    };
+
+    return (
+        <div className="p-4">
+            <PageHeader title="Customers" breadcrumb="Member List" />
+            {error && <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-lg text-sm">{error}</div>}
+            <div className="mt-6 bg-white rounded-xl shadow-sm border overflow-hidden">
+                {loading ? (
+                    <div className="p-8 text-center text-gray-500">
+                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-emerald-600 mx-auto mb-2"></div>
+                        Memuat data...
+                    </div>
+                ) : customers.length === 0 ? (
+                    <div className="p-8 text-center text-gray-500">Belum ada data member.</div>
+                ) : (
+                    <table className="w-full text-left">
+                        <thead className="bg-gray-50 uppercase text-[10px] text-gray-400 font-bold">
+                            <tr><th className="p-4">Nama</th><th className="p-4">Email</th><th className="p-4">Poin</th><th className="p-4">Tier</th><th className="p-4">Role</th></tr>
+                        </thead>
+                        <tbody>
+                            {customers.map((cust) => (
+                                <tr key={cust.id} className="border-t border-gray-50 hover:bg-gray-50">
+                                    <td className="p-4">
+                                        <Link to={`/customers/${cust.id}`} className="text-hijau hover:underline font-medium">{cust.full_name || "-"}</Link>
+                                    </td>
+                                    <td className="p-4 text-gray-600">{cust.email}</td>
+                                    <td className="p-4 font-bold text-gray-700">{cust.points}</td>
+                                    <td className="p-4">{tierBadge(cust.tier)}</td>
+                                    <td className="p-4">
+                                        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${cust.role === "admin" ? "bg-red-100 text-red-600" : "bg-blue-100 text-blue-600"}`}>{cust.role}</span>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                )}
+            </div>
         </div>
-      )}
-
-      {/* Tampilan Tabel Data Tetap Ada Di Sini */}
-      <div className="mt-6 bg-white rounded-xl shadow-sm border overflow-hidden">
-        <table className="w-full text-left">
-          <thead className="bg-gray-50 uppercase text-[10px] text-gray-400 font-bold">
-            <tr>
-              <th className="p-4">ID</th>
-              <th className="p-4">Name</th>
-              <th className="p-4">Loyalty</th>
-            </tr>
-          </thead>
-          <tbody>
-            {customerData.map((cust) => (
-              <tr key={cust.id} className="border-t border-gray-50">
-                <td className="p-4 font-bold text-gray-700">{cust.id}</td>
-
-                {/* Bagian Name yang sekarang bisa diklik */}
-                <td className="p-4">
-                  <Link
-                    to={`/customers/${cust.id}`} // Mengarahkan ke rute customer detail (misal: /customers/1)
-                    className="text-hijau hover:underline font-medium">
-                    {cust.name}
-                  </Link>
-                </td>
-                <td className="p-4 text-hijau font-bold">{cust.loyalty}</td>
-              </tr>
-            ))}
-         </tbody>
-        </table>
-      </div>
-    </div>
-  );
+    );
 }
